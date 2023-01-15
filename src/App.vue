@@ -1,27 +1,68 @@
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png">-->
-<!--&lt;!&ndash;  <HelloWorld msg="Welcome to Your Vue.js App"/>&ndash;&gt;-->
-<!--    <hello-world/>-->
+    <PageHeader/>
     <HomeView/>
     <router-view/>
 </template>
 
 <script>
+
+import PageHeader from "@/components/PageHeader";
 import HomeView from "@/components/HomeView";
 
 export default {
   name: 'App',
-  components: { HomeView }
+  components: {HomeView, PageHeader}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.container {
+    max-width: 1920px;
+    height: 100%;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+router-link,
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --accent_maincolor: #007F6E;
+}
+
+@media screen and (max-width: 1920px) {
+    .container {
+        max-width: 1620px;
+    }
+}
+
 </style>
