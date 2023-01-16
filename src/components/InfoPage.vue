@@ -1,13 +1,11 @@
 <template>
-    <PageHeader/>
+    <p></p>
 </template>
 
 <script>
-import PageHeader from "@/App";
 
 export default {
-    name: "InfoPage",
-    components: {PageHeader}
+    name: "InfoPage"
 }
 </script>
 

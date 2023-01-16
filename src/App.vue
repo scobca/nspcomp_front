@@ -1,17 +1,17 @@
 <template>
     <PageHeader/>
-    <HomeView/>
+    <PageNavigator v-if="$route.name !== 'home'"/>
     <router-view/>
 </template>
 
 <script>
 
 import PageHeader from "@/components/PageHeader";
-import HomeView from "@/components/HomeView";
+import PageNavigator from "@/components/PageNavigator";
 
 export default {
   name: 'App',
-  components: {HomeView, PageHeader}
+  components: {PageHeader, PageNavigator}
 }
 </script>
 
@@ -42,6 +42,13 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
 .container {
     max-width: 1920px;
     height: 100%;
@@ -57,6 +64,7 @@ a {
 
 :root {
     --accent_maincolor: #007F6E;
+    --accent_mainbackcolor: #dbdbdb;
 }
 
 @media screen and (max-width: 1920px) {

@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from "@/components/HomeView";
 import HelloWorld from "@/components/HelloWorld";
-import CathalogPage from "@/components/CatalogPage";
+import CatalogPage from "@/components/CatalogPage";
 import InfoPage from "@/components/InfoPage";
+import SliderElem from "@/components/SliderElem";
 
 const routes = [
     {
@@ -19,12 +20,17 @@ const routes = [
     {
         path: '/catalog',
         name: 'cat',
-        component: CathalogPage
+        component: CatalogPage
     },
     {
         path: '/info',
         name: 'info',
         component: InfoPage
+    },
+    {
+        path: '/slider',
+        name: 'slider',
+        component: SliderElem
     }
 ]
 
