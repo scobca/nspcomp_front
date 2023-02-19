@@ -33,52 +33,89 @@ export default {
 
 .main-header {
     height: 70px;
-    box-shadow: 0 2px 16px;
-    z-index: 100;
     width: 100%;
+
 }
 
 .main-header__container {
-    /*display: flex;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    background: #bdbdbd;
+    width: 100vw;
+}
+
+.main-header__logo {
+    height: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.main-header__menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 70vw;
-    padding: 86px 26px;
-    background: white;
-    z-index: 10;
-    transform: translateX(100%);
-    transition: all .3s;
-}
+/*.main-header {*/
+/*    display: flex;*/
+/*    position: relative;*/
 
-.menu__list {
-    /*size: 18px;*/
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    list-style-type: none;
-}
 
-.menu__link {
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+/*    height: 70px;*/
+/*    width: 100%;*/
 
-    text-decoration: none;
-    color: white !important;
-}
+/*    box-shadow: 0 2px 16px;*/
+/*    z-index: 100;*/
+/*    background: white;*/
+/*}*/
 
-.main-header__logo:hover {
-    background-color: transparent;
-    transition: color 0s, background-color 0s;
-    border-bottom: 2px solid var(--vue-color-dark) !important;
-    border-radius: 0;
-}
+/*.main-header__container {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 8px 24px;*/
+/*}*/
+
+/*.main-header__logo {*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    gap: 16px;*/
+/*}*/
+
+/*.main-header__menu {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    width: 70vw;*/
+/*    !*padding: 25px 26px;*!*/
+/*    vertical-align: center;*/
+/*    background: initial;*/
+/*    z-index: 10;*/
+/*    !*transform: translateX(100%);*!*/
+/*    transition: all .3s;*/
+/*}*/
+
+/*.menu__list {*/
+/*    !*size: 18px;*!*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    gap: 24px;*/
+/*}*/
+
+/*.menu__item {*/
+/*    font-family: Inter, sans-serif;*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+
+/*    text-decoration: none;*/
+/*    color: black !important;*/
+/*}*/
+
+/*.main-header__logo:hover {*/
+/*    background-color: transparent;*/
+/*    transition: color 0s, background-color 0s;*/
+/*    border-bottom: 2px solid var(--vue-color-dark) !important;*/
+/*    border-radius: 0;*/
+/*}*/
 
 </style>

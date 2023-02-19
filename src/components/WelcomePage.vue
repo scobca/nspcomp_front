@@ -30,6 +30,7 @@ defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100vw;
 }
 
 .greetings-container-logo {
@@ -64,6 +65,7 @@ h3 {
 }
 
 .catalog_btt {
+    margin-left: 0;
     margin-top: 2rem;
     border: 2px solid var(--logo-retina-color);
     border-radius: 5px;
