@@ -35,13 +35,17 @@
 
     --section-gap: 160px;
 }
-
 :root{
     --vue-color: hsla(160, 100%, 37%, 1);
+    --vue-color-light: hsla(160, 100%, 37%, 0.75);
+    --vue-color-medium: hsla(160, 100%, 37%, 0.5);
     --vue-color-dark: hsla(160, 100%, 37%, 0.2);
+
     --logo-retina-color: rgba(0, 127, 110, 1);
-    --logo-retina-color-dark: rgba(0, 127, 110, 0.35) ;
+    --logo-retina-color-dark: rgba(0, 127, 110, 0.35);
+    --logo-retina-color-light: rgba(0, 127, 110, 0.75) ;
 }
+
 
 @media (prefers-color-scheme: dark) {
     :root {
