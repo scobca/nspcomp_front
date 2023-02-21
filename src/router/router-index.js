@@ -1,20 +1,30 @@
 import {createRouter, createWebHashHistory} from "vue-router";
-import CatalogPage from "@/components/CatalogPage.vue";
-import WelcomePage from "@/components/WelcomePage.vue";
-import PageHeader from "@/components/PageHeader.vue";
+import HomeView from "@/components/HomeView.vue";
+import CatalogView from "@/components/CatalogView.vue";
+import LoginView from "@/components/LoginView.vue";
+import InfoView from "@/components/InfoView.vue";
 
 const routes = [
     {
         path: '/',
         alias: '/home',
         name: 'home',
-        component: WelcomePage
+        component: HomeView
     },
     {
         path: '/catalog',
-        alias: '/catalog',
         name: 'catalog',
-        component: CatalogPage
+        component: CatalogView
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: LoginView
+    },
+    {
+        path:'/info',
+        name: 'info',
+        component: InfoView
     }
 ]
 const router = createRouter({

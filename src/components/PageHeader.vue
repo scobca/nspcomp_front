@@ -17,12 +17,23 @@ export default {
            <nav class="main-header__menu menu">
                <ul class="menu__list">
                    <li class="menu__item">
-                       <router-link :to="{ name: 'home' }" class="menu__link"> Главная </router-link>
+                       <router-link :to="{ name: 'login' }" class="menu__link"> Вход </router-link>
+                   </li>
+
+                   <li class="menu__item">
+                       <router-link :to="{ name: 'info' }" class="menu__link"> О нас </router-link>
                    </li>
 
                    <li class="menu__item">
                        <router-link :to="{ name: 'catalog' }" class="menu__link"> Каталог </router-link>
                    </li>
+
+
+<!--                   <li class="menu__item">-->
+<!--                       <router-link :to="{ name: 'home' }" class="menu__link"> Главная </router-link>-->
+<!--                   </li>-->
+
+
                </ul>
            </nav>
        </div>
@@ -59,7 +70,7 @@ export default {
     bottom: 0;
     width: 50vw;
     height: 70px;
-    padding: 14px;
+    padding: 14px 0;
     vertical-align: center;
     z-index: 10;
     transition: all .3s;
