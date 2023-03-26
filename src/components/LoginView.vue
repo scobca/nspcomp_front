@@ -1,10 +1,10 @@
 <template>
-    <p></p>
+    <p>welcome to login page</p>
 </template>
 
 <script>
 export default {
-    name: "CatalogPage"
+    name: "LofinView"
 }
 </script>
 

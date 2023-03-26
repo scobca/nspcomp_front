@@ -1,76 +1,37 @@
 <template>
+<!--        <PageHeader v-if="$route.name !== 'home'"/>-->
     <PageHeader/>
-    <PageNavigator v-if="$route.name !== 'home'"/>
-    <router-view/>
+    <v-carousel :carousel_data="sliderItem" v-if="$route.name === 'home'"/>
+
 </template>
 
-<script>
 
-import PageHeader from "@/components/PageHeader";
-import PageNavigator from "@/components/PageNavigator";
+<script>
+import PageHeader from "@/components/PageHeader.vue";
+import vCarousel from './components/v-carousel.vue';
 
 export default {
-  name: 'App',
-  components: {PageHeader, PageNavigator}
-}
-</script>
-
-<style>
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-#app {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1920px;
-    height: 100%;
-    padding: 16px;
-    margin: 0 auto;
-}
-
-router-link,
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-:root {
-    --accent_maincolor: #007F6E;
-    --accent_mainbackcolor: #dbdbdb;
-}
-
-@media screen and (max-width: 1920px) {
-    .container {
-        max-width: 1620px;
+    name: 'app',
+    components: {vCarousel, PageHeader},
+    data() {
+        return{
+            sliderItem: [
+                {id: 1, img: '1.png', name: 'img1'},
+                {id: 2, img: '2.png', name: 'img2'},
+                {id: 3, img: '3.png', name: 'img3'}
+            ]
+        }
     }
 }
 
+</script>
+
+<style scoped>
+v-carousel {
+    z-index: 100;
+}
+
+app {
+    background-color: white;
+}
 </style>

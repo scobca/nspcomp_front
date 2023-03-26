@@ -5,10 +5,10 @@
         <div class="welcome_container container">
 
             <div class="welcome_content">
-<!--                <img src="../../public/img/background_slider_1.jpg" alt="slider">-->
-<!--                <h1 class="welcome__title">NSP - забота о здоровье!</h1>-->
-<!--                <p class="welcome_about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolore, fugit? Corporis cumque exercitationem illo quia quis quod, velit. Sit.</p>-->
-<!--                <router-link class="welcome__start btn" :to="{ name: 'cat' }"> Начать покупки </router-link>-->
+                <!--                <img src="../../public/img/background_slider_1.jpg" alt="slider">-->
+                <!--                <h1 class="welcome__title">NSP - забота о здоровье!</h1>-->
+                <!--                <p class="welcome_about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolore, fugit? Corporis cumque exercitationem illo quia quis quod, velit. Sit.</p>-->
+                <!--                <router-link class="welcome__start btn" :to="{ name: 'cat' }"> Начать покупки </router-link>-->
             </div>
 
         </div>
@@ -19,7 +19,7 @@
 
 <script>
 
-import SliderElem from "@/components/SliderElem";
+import SliderElem from "@/components/v-carousel.vue";
 
 export default {
     name: "HomeView",
@@ -31,7 +31,6 @@ export default {
 <style scoped>
 
 .welcome {
-    background: var(--accent_mainbackcolor);
     height: 406px;
 }
 
