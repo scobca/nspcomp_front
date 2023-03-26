@@ -7,6 +7,7 @@
 
 
 <script>
+
 import PageHeader from "@/components/PageHeader.vue";
 import vCarousel from './components/v-carousel.vue';
 
