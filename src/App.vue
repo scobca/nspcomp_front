@@ -2,7 +2,7 @@
 <!--        <PageHeader v-if="$route.name !== 'home'"/>-->
     <PageHeader/>
     <v-carousel :carousel_data="sliderItem" v-if="$route.name === 'home'"/>
-
+    <div id="appp"> {{width}} </div>
 </template>
 
 
@@ -14,14 +14,24 @@ import vCarousel from './components/v-carousel.vue';
 export default {
     name: 'app',
     components: {vCarousel, PageHeader},
-    data() {
-        return{
+    data: () => {
+        return {
             sliderItem: [
-                {id: 1, img: '1.png', name: 'img1'},
-                {id: 2, img: '2.png', name: 'img2'},
-                {id: 3, img: '3.png', name: 'img3'}
-            ]
+                {id: 1, img: 'slider1.svg', name: 'img1'},
+                {id: 2, img: 'slider2.svg', name: 'img2'},
+                {id: 3, img: 'slider3.svg', name: 'img3'}
+            ],
+            width: 0,
         }
+    },
+    methods: {
+        updateWidth() {
+            this.width = window.innerWidth;
+        }
+    },
+    created() {
+        window.addEventListener('resize', this.updateWidth);
+        this.updateWidth();
     }
 }
 
@@ -34,5 +44,10 @@ v-carousel {
 
 app {
     background-color: white;
+    overflow: hidden;
+}
+
+v-carousel {
+
 }
 </style>

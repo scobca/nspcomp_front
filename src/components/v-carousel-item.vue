@@ -1,6 +1,6 @@
 <template>
     <div class="v-carouser-item">
-        <img :src=" require('../assets/catalog/' + item_data.img )" alt="">
+        <img :src=" require('../assets/sliderElem/' + item_data.img )" alt="">
     </div>
 </template>
 
@@ -23,8 +23,16 @@ export default {
 
 <style scoped>
 
-img {
-    width: 100px;
+@media only screen and (min-width: 1440px)  {
+    img {
+        width: 70vw;
+        margin-left: 15vw;
+    }
 }
 
+@media only screen and (max-width: 1440px)  {
+    img {
+        width: 100vw;
+    }
+}
 </style>
