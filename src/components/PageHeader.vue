@@ -44,7 +44,7 @@ export default {
 
 .main-header {
     height: 70px;
-    width: 100%;
+    max-width: 100vw;
 }
 
 .main-header__container {

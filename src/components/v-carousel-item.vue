@@ -23,16 +23,4 @@ export default {
 
 <style scoped>
 
-@media only screen and (min-width: 1440px)  {
-    img {
-        width: 70vw;
-        margin-left: 15vw;
-    }
-}
-
-@media only screen and (max-width: 1440px)  {
-    img {
-        width: 100vw;
-    }
-}
 </style>

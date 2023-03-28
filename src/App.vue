@@ -1,19 +1,20 @@
 <template>
-<!--        <PageHeader v-if="$route.name !== 'home'"/>-->
-    <PageHeader/>
-    <v-carousel :carousel_data="sliderItem" v-if="$route.name === 'home'"/>
-    <div id="appp"> {{width}} </div>
+    <div class="v-carousel-app">
+        <v-carousel :carousel_data="sliderItem" v-if="$route.name === 'home'"/>
+    </div>
+
+    <div id="app"> {{width}} </div>
 </template>
 
 
 <script>
 
-import PageHeader from "@/components/PageHeader.vue";
+// import PageHeader from "@/components/PageHeader.vue";
 import vCarousel from './components/v-carousel.vue';
 
 export default {
     name: 'app',
-    components: {vCarousel, PageHeader},
+    components: {vCarousel},
     data: () => {
         return {
             sliderItem: [
@@ -38,16 +39,10 @@ export default {
 </script>
 
 <style scoped>
-v-carousel {
-    z-index: 100;
-}
 
 app {
     background-color: white;
-    overflow: hidden;
+    width: 100px;
 }
 
-v-carousel {
-
-}
 </style>
