@@ -15,6 +15,7 @@
 
 <script>
 import vCarouselItem from './v-carousel-item.vue'
+
 export default {
     name: "v-carousel",
     components: {vCarouselItem},
@@ -35,11 +36,20 @@ export default {
                 this.currentSlideIndex--
                 console.log(this.currentSlideIndex)
             }
+            else if (this.currentSlideIndex === 0) {
+                this.currentSlideIndex = 3;
+                this.currentSlideIndex --
+                console.log(this.currentSlideIndex);
+            }
         },
         nextSlide() {
             if (this.currentSlideIndex < 2) {
                 this.currentSlideIndex++
-                console.log(this.currentSlideIndex)
+                console.log(this.currentSlideIndex);
+            }
+            else if (this.currentSlideIndex === 2) {
+                this.currentSlideIndex = 0;
+                console.log(this.currentSlideIndex);
             }
         }
     }
