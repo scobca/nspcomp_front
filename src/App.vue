@@ -1,6 +1,10 @@
 <template>
     <div class="v-carousel-app">
-        <v-carousel :carousel_data="sliderItem" v-if="$route.name === 'home'"/>
+        <v-carousel
+            :carousel_data="sliderItem"
+            :interval="4000"
+            v-if="$route.name === 'home'"
+        />
     </div>
 
     <div id="app"> {{width}} </div>
@@ -33,7 +37,7 @@ export default {
     created() {
         window.addEventListener('resize', this.updateWidth);
         this.updateWidth();
-    }
+    },
 }
 
 </script>

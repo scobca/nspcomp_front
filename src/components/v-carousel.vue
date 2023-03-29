@@ -1,10 +1,11 @@
 <template>
     <div class="wrapper">
-        <div class="v-carousel" :style="{ 'margin-left': '-' + (100 * this.currentSlideIndex) + '%' }">
+        <div class="v-carousel" :style="{ 'margin-left': '-' + (100 * this.currentSlideIndex) + '%'}">
             <v-carousel-item
                 v-for="item in carousel_data"
                 :key = 'item.id'
                 :item_data = 'item'
+                :imageSlide = 'true'
             />
         </div>
         <button class="prev" @click="prevSlide">Prev</button>
@@ -23,6 +24,10 @@ export default {
         carousel_data: {
             type: Array,
             default: () => []
+        },
+        interval: {
+            type: Number,
+            default: 0
         }
     },
     data() {
@@ -34,29 +39,36 @@ export default {
         prevSlide() {
             if (this.currentSlideIndex > 0) {
                 this.currentSlideIndex--
-                console.log(this.currentSlideIndex)
+                // console.log(this.currentSlideIndex)
             }
             else if (this.currentSlideIndex === 0) {
                 this.currentSlideIndex = 3;
-                this.currentSlideIndex --
-                console.log(this.currentSlideIndex);
+                this.currentSlideIndex--
+                // console.log(this.currentSlideIndex);
             }
         },
         nextSlide() {
-            if (this.currentSlideIndex < 2) {
-                this.currentSlideIndex++
-                console.log(this.currentSlideIndex);
-            }
-            else if (this.currentSlideIndex === 2) {
+            if (this.currentSlideIndex >= this.carousel_data.length - 1) {
                 this.currentSlideIndex = 0;
-                console.log(this.currentSlideIndex);
+                // console.log(this.currentSlideIndex);
+            } else {
+                this.currentSlideIndex++
+                // console.log(this.currentSlideIndex);
             }
+        }
+    },
+    mounted() {
+        if (this.interval > 0) {
+            let vm = this;
+            setInterval(function () {
+                vm.nextSlide()
+            }, vm.interval)
         }
     }
 }
 </script>
 
-<style scoped>
+<style scoped v-if="this.currentSlideIndex === 2">
 
 .wrapper {
     max-width: 1440px;
@@ -65,8 +77,10 @@ export default {
 
 .v-carousel {
     display: flex;
+    transition: all ease 2s;
 }
 
 </style>
 
-<!--12:09 видео-->
+
+<!--20:29 видео-->
