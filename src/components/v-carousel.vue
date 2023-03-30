@@ -8,8 +8,14 @@
                 :imageSlide = 'true'
             />
         </div>
-        <button class="prev" @click="prevSlide">Prev</button>
-        <button class="next" @click="nextSlide">Next</button>
+        <button class="prev" @click="prevSlide" >
+            <img src="../assets/sliderElem/prevSlide.svg" alt="Prev slide">
+        </button>
+        
+        <button class="next" @click="nextSlide">
+            <img src="../assets/sliderElem/nextSlide.svg" alt="Next slide">
+        </button>
+
     </div>
 
 </template>
@@ -73,11 +79,27 @@ export default {
 .wrapper {
     max-width: 1440px;
     overflow: hidden;
+    margin-top: 5vh;
 }
 
 .v-carousel {
     display: flex;
     transition: all ease 2s;
+}
+
+.next, .prev {
+    background-color: var(--vt-c-black);
+    border: 0;
+}
+
+.next > img, .prev > img {
+    height: 5vh;
+}
+
+.next > img:hover, .prev > img:hover {
+    border: 2px solid var(--logo-retina-color-light);
+    border-radius: 10px;
+    transition: all  ease .1s;
 }
 
 </style>

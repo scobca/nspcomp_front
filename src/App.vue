@@ -6,7 +6,6 @@
             v-if="$route.name === 'home'"
         />
     </div>
-
     <div id="app"> {{width}} </div>
 </template>
 
@@ -26,7 +25,7 @@ export default {
                 {id: 2, img: 'slider2.svg', name: 'img2'},
                 {id: 3, img: 'slider3.svg', name: 'img3'}
             ],
-            width: 0,
+            width: 0
         }
     },
     methods: {
@@ -37,7 +36,8 @@ export default {
     created() {
         window.addEventListener('resize', this.updateWidth);
         this.updateWidth();
-    },
+
+    }
 }
 
 </script>
@@ -47,6 +47,9 @@ export default {
 app {
     background-color: white;
     width: 100px;
+}
+.v-carouser-item :hover{
+    v-for():
 }
 
 </style>
