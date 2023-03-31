@@ -33,6 +33,10 @@
     --color-heading: var(--vt-c-text-light-1);
     --color-text: var(--vt-c-text-light-1);
 
+    --color-common-bg-buttons-slider: var(--vt-c-white);
+    --color-bg-buttons-slider: var(--logo-retina-color);
+    --color-border-buttons-slider: #ababaa;
+
     --section-gap: 160px;
 }
 :root{
@@ -46,7 +50,6 @@
     --logo-retina-color-light: rgba(0, 127, 110, 0.75) ;
 }
 
-
 @media (prefers-color-scheme: dark) {
     :root {
         --color-background: var(--vt-c-black);
@@ -58,6 +61,10 @@
 
         --color-heading: var(--vt-c-text-dark-1);
         --color-text: var(--vt-c-text-dark-2);
+
+        --color-common-bg-buttons-slider: var(--vt-c-black);
+        --color-bg-buttons-slider: var(--vt-c-black-mute);
+        --color-border-buttons-slider: var(--logo-retina-color-light);
     }
 }
 

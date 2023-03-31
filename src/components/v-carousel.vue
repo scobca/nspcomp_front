@@ -87,19 +87,47 @@ export default {
     transition: all ease 2s;
 }
 
-.next, .prev {
-    background-color: var(--vt-c-black);
-    border: 0;
-}
-
 .next > img, .prev > img {
     height: 5vh;
 }
 
-.next > img:hover, .prev > img:hover {
-    border: 2px solid var(--logo-retina-color-light);
+@media (prefers-color-scheme: dark) {
+    .next, .prev {          /*фон всего элемента кнопки*/
+        background-color: var(--color-common-bg-buttons-slider);
+        border: 0;
+        padding: 10px 5px 0 5px;      /* top right bottom left */
+    }
+
+    .next > img:hover, .prev > img:hover {          /*рамка кнопки при наведении*/
+        border: 3px solid var(--color-border-buttons-slider);
+        border-radius: 10px;
+        transition: all  ease .1s;
+    }
+
+    .next > img, .prev > img {              /*фон изображения кнопок*/
+        background-color: var(--color-bg-buttons-slider);
+        border-radius: 10px;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    .next, .prev {          /*фон всего элемента кнопки*/
+    background-color: var(--color-common-bg-buttons-slider);
+    border: 0;
+    padding: 10px 5px 0 5px;      /* top right bottom left */
+    }
+
+    .next > img:hover, .prev > img:hover {          /*рамка кнопки при наведении*/
+    border: 3px solid var(--color-border-buttons-slider);
     border-radius: 10px;
     transition: all  ease .1s;
+    }
+
+    .next > img, .prev > img {          /*фон изображения кнопок*/
+    background-color: var(--color-bg-buttons-slider);
+    border-radius: 10px;
+    }
 }
 
 </style>
