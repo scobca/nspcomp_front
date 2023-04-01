@@ -65,6 +65,10 @@
         --color-common-bg-buttons-slider: var(--vt-c-black);
         --color-bg-buttons-slider: var(--vt-c-black-mute);
         --color-border-buttons-slider: var(--logo-retina-color-light);
+
+        --color-common-bg-buttons-header: var(--vt-c-black);
+        --color-bg-buttons-header: var(--vt-c-black-mute);
+        --color-border-buttons-header: var(--logo-retina-color-light);
     }
 }
 

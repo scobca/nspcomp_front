@@ -1,9 +1,11 @@
 <template>
     <div class="v-carousel-app">
+        <PageHeader class="page_header"/>
         <v-carousel
             :carousel_data="sliderItem"
             :interval="4000"
             v-if="$route.name === 'home'"
+            class="carousel_app"
         />
     </div>
     <div id="app"> {{width}} </div>
@@ -14,10 +16,11 @@
 
 // import PageHeader from "@/components/PageHeader.vue";
 import vCarousel from './components/v-carousel.vue';
+import PageHeader from "@/components/PageHeader.vue";
 
 export default {
     name: 'app',
-    components: {vCarousel},
+    components: {PageHeader, vCarousel},
     data: () => {
         return {
             sliderItem: [
@@ -44,12 +47,13 @@ export default {
 
 <style scoped>
 
-app {
-    background-color: white;
-    width: 100px;
-}
-.v-carouser-item :hover{
-    v-for():
-}
+    app {
+        background-color: white;
+        width: 100px;
+    }
+
+    .carousel_app {
+        margin-top: calc(70px + 2vh);
+    }
 
 </style>
