@@ -113,20 +113,20 @@ export default {
 
 @media (prefers-color-scheme: light) {
     .next, .prev {          /*фон всего элемента кнопки*/
-    background-color: var(--color-common-bg-buttons-slider);
-    border: 0;
-    padding: 10px 5px 0 5px;      /* top right bottom left */
+        background-color: var(--color-common-bg-buttons-slider);
+        border: 0;
+        padding: 10px 5px 0 5px;      /* top right bottom left */
     }
 
     .next > img:hover, .prev > img:hover {          /*рамка кнопки при наведении*/
-    border: 3px solid var(--color-border-buttons-slider);
-    border-radius: 10px;
-    transition: all  ease .1s;
+        border: 3px solid var(--color-border-buttons-slider);
+        border-radius: 10px;
+        transition: all  ease .1s;
     }
 
     .next > img, .prev > img {          /*фон изображения кнопок*/
-    background-color: var(--color-bg-buttons-slider);
-    border-radius: 10px;
+        background-color: var(--color-bg-buttons-slider);
+        border-radius: 10px;
     }
 }
 

@@ -67,23 +67,37 @@
 
 
 @media (prefers-color-scheme: dark) {
+
+    .menu__button {
+        scale: 100%;
+        transition-property: scale;
+        transition-duration: .25s;
+    }
+
+    .menu__button:hover {
+        scale: 110%;
+        transition-property: scale;
+        transition-duration: .25s;
+    }
+
     .menu__link {
+        box-sizing: border-box;
+
         padding: 4px;
         position: relative;
         color: var(--logo-retina-color);
         text-decoration: none;
+        border: 2px solid var(--vt-c-black-soft);
+        border-radius: 10px;
     }
 
     .menu__link:hover {
         position: relative;
-
-        scale: 110%;
-        color: var(--logo-retina-color);
         padding: 4px;
 
         border: 2px solid var(--logo-retina-color);
         border-radius: 10px;
-        transition: all ease .5s;
+        transition-duration: .5s;
     }
 }
 
