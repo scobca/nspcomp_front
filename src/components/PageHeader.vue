@@ -65,12 +65,23 @@
     margin: 1.5vh 0 0 1.5vh;            /*top right bottom left*/
 }
 
+
 @media (prefers-color-scheme: dark) {
-    .menu__button:hover {
+    .menu__link {
+        padding: 4px;
+        position: relative;
+        color: var(--logo-retina-color);
+        text-decoration: none;
+    }
+
+    .menu__link:hover {
         position: relative;
 
-        border: 2px solid var(--color-border-buttons-header);
+        scale: 110%;
+        color: var(--logo-retina-color);
         padding: 4px;
+
+        border: 2px solid var(--logo-retina-color);
         border-radius: 10px;
         transition: all ease .5s;
     }

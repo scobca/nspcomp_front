@@ -48,6 +48,7 @@
     --logo-retina-color: rgba(0, 127, 110, 1);
     --logo-retina-color-dark: rgba(0, 127, 110, 0.35);
     --logo-retina-color-light: rgba(0, 127, 110, 0.75) ;
+    --logo-retina-color-ultra-light: rgba(0, 127, 110, 1.5) ;
 }
 
 @media (prefers-color-scheme: dark) {
