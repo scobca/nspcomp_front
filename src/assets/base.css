@@ -3,6 +3,7 @@
     --vt-c-white: #ffffff;
     --vt-c-white-soft: #f8f8f8;
     --vt-c-white-mute: #f2f2f2;
+    --vt-c-white-header: #f6f6f6;
 
     --vt-c-black: #181818;
     --vt-c-black-soft: #222222;
@@ -26,6 +27,7 @@
     --color-background: var(--vt-c-white);
     --color-background-soft: var(--vt-c-white-soft);
     --color-background-mute: var(--vt-c-white-mute);
+    --color-header: var(--vt-c-white-header);
 
     --color-border: var(--vt-c-divider-light-2);
     --color-border-hover: var(--vt-c-divider-light-1);
@@ -35,7 +37,7 @@
 
     --color-common-bg-buttons-slider: var(--vt-c-white);
     --color-bg-buttons-slider: var(--logo-retina-color);
-    --color-border-buttons-slider: #ababaa;
+    /*--color-border-buttons-slider: var(--logo-retina-color-dark);*/
 
     --color-common-bg-buttons-header: var(--vt-c-white);
     --color-bg-buttons-header: var(--logo-retina-color);

@@ -3,7 +3,7 @@
         <div class="main_header__logo">
             <h1 class="header_logo">
                 <router-link :to="{ name: 'home' }">
-                    <img src="../assets/interface-elements/logo_retina.svg" alt="">
+                    <img src="../assets/interface-elements/logo_retina.svg" alt="" class="logo">
                 </router-link>
             </h1>
         </div>
@@ -31,6 +31,11 @@
 </script>
 
 <style scoped>
+
+.logo {
+    height: 40px;
+}
+
 .main_header {
     position: fixed;
     top: 0;
@@ -66,10 +71,6 @@
 
 @media (prefers-color-scheme: dark) {
 
-    .menu__button, .menu__button:hover, .menu__link, .menu__link:hover {
-        box-sizing: border-box;
-    }
-
     .main_header {
         background-color: var(--vt-c-black-soft);
     }
@@ -93,15 +94,15 @@
         position: relative;
         color: var(--logo-retina-color);
         text-decoration: none;
-        border: 2px solid var(--vt-c-black-soft);
+        outline: 2px solid var(--vt-c-black-soft);
         border-radius: 10px;
     }
 
     .menu__link:hover {
         position: relative;
-        padding: 3px;
+        padding: 4px;
 
-        border: 2px solid var(--logo-retina-color);
+        outline: 2px solid var(--logo-retina-color);
         border-radius: 10px;
         transition-duration: .5s;
     }
@@ -110,12 +111,10 @@
 
 @media (prefers-color-scheme: light) {
 
-    .menu__button, .menu__button:hover, .menu__link, .menu__link:hover {
-        box-sizing: border-box;
-    }
-
     .main_header {
-        background-color: var(--vt-c-white-soft);
+        background-color: var(--color-header);
+        /*box-shadow: 0 4px 10px var(--color-header);*/
+        box-shadow: 0 0 4px 3px rgba(0, 0, 0, .1);
     }
 
     .menu__button {
@@ -131,23 +130,22 @@
     }
 
     .menu__link {
-        box-sizing: border-box;
-
-        padding: 3px;
+        padding: 4px;
         position: relative;
+
         color: var(--logo-retina-color);
         text-decoration: none;
-        border: 2px solid var(--vt-c-white-soft);
-        border-radius: 10px;
 
-        /*поробовать outline вместо border*/
+        outline: 2px solid var(--color-header);
+        border-radius: 10px;
+        transition-duration: .25s;
     }
 
     .menu__link:hover {
         position: relative;
         padding: 4px;
 
-        border: 2px solid var(--logo-retina-color);
+        outline: 2px solid var(--logo-retina-color);
         border-radius: 10px;
         transition-duration: .5s;
     }

@@ -3,7 +3,7 @@
         <PageHeader class="page_header"/>
         <v-carousel
             :carousel_data="sliderItem"
-            :interval="4000"
+            :interval="0"
             v-if="$route.name === 'home'"
             class="carousel_app"
         />
