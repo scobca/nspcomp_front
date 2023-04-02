@@ -37,6 +37,10 @@
     --color-bg-buttons-slider: var(--logo-retina-color);
     --color-border-buttons-slider: #ababaa;
 
+    --color-common-bg-buttons-header: var(--vt-c-white);
+    --color-bg-buttons-header: var(--logo-retina-color);
+    --color-border-buttons-header: #ababaa;
+
     --section-gap: 160px;
 }
 :root{

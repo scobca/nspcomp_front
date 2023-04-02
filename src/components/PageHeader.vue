@@ -49,8 +49,6 @@
     z-index: 100;
     margin: 0;
     padding: 0;
-
-    background-color: var(--vt-c-black-soft);
 }
 
 .menu__list {
@@ -67,6 +65,14 @@
 
 
 @media (prefers-color-scheme: dark) {
+
+    .menu__button, .menu__button:hover, .menu__link, .menu__link:hover {
+        box-sizing: border-box;
+    }
+
+    .main_header {
+        background-color: var(--vt-c-black-soft);
+    }
 
     .menu__button {
         scale: 100%;
@@ -89,6 +95,52 @@
         text-decoration: none;
         border: 2px solid var(--vt-c-black-soft);
         border-radius: 10px;
+    }
+
+    .menu__link:hover {
+        position: relative;
+        padding: 3px;
+
+        border: 2px solid var(--logo-retina-color);
+        border-radius: 10px;
+        transition-duration: .5s;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+
+    .menu__button, .menu__button:hover, .menu__link, .menu__link:hover {
+        box-sizing: border-box;
+    }
+
+    .main_header {
+        background-color: var(--vt-c-white-soft);
+    }
+
+    .menu__button {
+        scale: 100%;
+        transition-property: scale;
+        transition-duration: .25s;
+    }
+
+    .menu__button:hover {
+        scale: 110%;
+        transition-property: scale;
+        transition-duration: .25s;
+    }
+
+    .menu__link {
+        box-sizing: border-box;
+
+        padding: 3px;
+        position: relative;
+        color: var(--logo-retina-color);
+        text-decoration: none;
+        border: 2px solid var(--vt-c-white-soft);
+        border-radius: 10px;
+
+        /*поробовать outline вместо border*/
     }
 
     .menu__link:hover {
