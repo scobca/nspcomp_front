@@ -1,16 +1,10 @@
 <template>
-    <SliderElem/>
 
     <section class="welcome">
         <div class="welcome_container container">
-
             <div class="welcome_content">
-                <!--                <img src="../../public/img/background_slider_1.jpg" alt="slider">-->
-                <!--                <h1 class="welcome__title">NSP - забота о здоровье!</h1>-->
-                <!--                <p class="welcome_about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolore, fugit? Corporis cumque exercitationem illo quia quis quod, velit. Sit.</p>-->
-                <!--                <router-link class="welcome__start btn" :to="{ name: 'cat' }"> Начать покупки </router-link>-->
+               <h2 class="welcome_text"> Добро пожаловать!</h2>
             </div>
-
         </div>
     </section>
 
@@ -19,28 +13,30 @@
 
 <script>
 
-import SliderElem from "@/components/v-carousel.vue";
-
 export default {
     name: "HomeView",
-    components: {SliderElem}
+    components: {}
 }
 
 </script>
 
 <style scoped>
+    .welcome {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-.welcome {
-    height: 406px;
-}
+    .welcome_content {
+        width: 30vw;
+    }
 
-.welcome_content {
-    margin-left: -16px ;
-    margin-top: -16px;
-    display: flex;
-    font-family: Inter, sans-serif;
-    color: black;
-    font-weight: normal;
-}
+    @media (prefers-color-scheme: dark) {
+        .welcome_content {
+            background-color: var(--vt-welcome-bg-dark-medium);
+            border-radius: 10px;
+            height: 40vh;
+        }
+    }
 
 </style>

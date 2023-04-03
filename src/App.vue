@@ -7,8 +7,9 @@
             v-if="$route.name === 'home'"
             class="carousel_app"
         />
+        <HomeView/>
     </div>
-    <div id="app"> {{width}} </div>
+
 </template>
 
 
@@ -17,10 +18,11 @@
 // import PageHeader from "@/components/PageHeader.vue";
 import vCarousel from './components/v-carousel.vue';
 import PageHeader from "@/components/PageHeader.vue";
+import HomeView from "@/components/HomeView.vue";
 
 export default {
     name: 'app',
-    components: {PageHeader, vCarousel},
+    components: {HomeView, PageHeader, vCarousel},
     data: () => {
         return {
             sliderItem: [

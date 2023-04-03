@@ -57,6 +57,13 @@
     --logo-retina-color-ultra-light: rgba(0, 127, 110, 1.5) ;
 }
 
+:root {
+    --vt-welcome-bg-dark: rgba(153, 130, 190, 1);
+    --vt-welcome-bg-dark-soft: rgba(194, 180, 216, 1);
+    --vt-welcome-bg-dark-medium: rgba(173, 155, 203, .8);
+    --vt-welcome-bg-dark-mute: rgba(122, 104, 152, 1);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --color-background: var(--vt-c-black);
