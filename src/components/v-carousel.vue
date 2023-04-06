@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div class="v-carousel" :style="{ 'margin-left': '-' + (100 * this.currentSlideIndex) + '%'}">
+        <div class="v-carousel" :style="{ 'margin-left': '-' + (1440 * this.currentSlideIndex) + 'px'}">
             <v-carousel-item
                 v-for="item in carousel_data"
                 :key = 'item.id'
@@ -88,7 +88,7 @@ export default {
 }
 
 .next > img, .prev > img {
-    height: 5vh;
+    height: 2.5vw;
 }
 
 @media (prefers-color-scheme: dark) {

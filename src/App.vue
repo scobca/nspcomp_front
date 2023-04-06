@@ -1,15 +1,14 @@
 <template>
+    <PageHeader class="page_header"/>
     <div class="v-carousel-app">
-        <PageHeader class="page_header"/>
         <v-carousel
             :carousel_data="sliderItem"
             :interval="0"
             v-if="$route.name === 'home'"
-            class="carousel_app"
+            class="carousel_slider"
         />
-        <HomeView/>
     </div>
-
+    <HomeView class="homeView"/>
 </template>
 
 
@@ -51,11 +50,18 @@ export default {
 
     app {
         background-color: white;
-        width: 100px;
+        width: 100vw;
     }
 
-    .carousel_app {
-        margin-top: calc(70px + 2vh);
+    .carousel_slider {
+        margin: calc(70px + 2vh) 2.5vw 0;
+        width: 95vw;
+    }
+
+    .homeView {
+        display: flex;
+        flex-direction: row;
+        justify-content: left !important;
     }
 
 </style>

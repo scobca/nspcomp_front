@@ -11,9 +11,10 @@
                 </header>
 
                 <div class="welcome_footer">
-                    <p class="welcome_footer"> Коротко о нас:
-                        <br> Офис 260 является одним из самых больших и развитых офисов компании в г.Санкт-Петербурге.
-                        Директор офиса Лахтеева С.В.
+                    <p class="fContent_head"> Коротко о нас: </p>
+                    <p class="footer_content">
+                        <br> мы являемся академовцами из академии цифровых технологий, вообще ковалёв красавчик что тут еще сказать
+                        АааААааААаААааАааАааАаААА аАааАаАааАооаОАОоао АООАОООАоооаоаоаоо
                     </p>
                 </div>
             </div>
@@ -37,27 +38,30 @@ export default {
     .welcome {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        margin: auto;
+        justify-content: left;
+        margin-top: 8vh;
+        margin-left: 2.5vw;
     }
 
     .welcome_container {
-        width: 30vw;
-        max-width: 400px;
+        width: auto;
+        max-width: 350px;
     }
 
-    .welcome_content{
-        height: auto;
-        margin-top: 8vh;
+    .welcome_content, .welcome_footer{
+        height: 100vh;
     }
     
     .welcome_footer {
         padding: 16px;
         text-align: left;
     }
-    
-    .head_welcome{
+
+    .fContent_head {
         text-align: center;
+        padding: 0;
+        font-size: 1.7rem;
+        margin-bottom: -2.5vh;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -68,10 +72,10 @@ export default {
 
         .welcome_header {
             font-family: Comfortaa, cursive;
-            height: 10vh;
+            height: auto;
 
-            background: url("../assets/background/bg-grad-1.jpg");
-            background-size: 30vw;
+            background-image: url("../../src/assets/background/bg-grad-1.jpg") ;
+            background-size: 100%;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
 
@@ -80,7 +84,7 @@ export default {
         }
 
         .welcome_header > h2 {
-            padding: 2vh 0 0 0;
+            padding: 8px;
             letter-spacing: 2px;
             color: var(--vt-c-white-mute);
         }
