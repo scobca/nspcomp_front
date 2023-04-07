@@ -3,7 +3,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 
-    <section class="welcome">
+    <section class="welcome" data-aos="fade-down" data-aos-duration="1000">
         <section class="welcome_container container">
             <div class="welcome_content">
                 <header class="welcome_header">
@@ -11,13 +11,20 @@
                 </header>
 
                 <div class="welcome_footer">
-                    <p class="fContent_head"> Коротко о нас: </p>
+                    <p class="fContent_head" > Коротко о нас: </p>
                     <p class="fContent">
                         Мы являемся официальным дистрибьютером компании NSP в Санкт-Петербурге.
                         <br> <br> Директор нашего офиса, наш лидер
                         - Фокина Ольга Сергеевна!
                     </p>
                 </div>
+            </div>
+
+            <div class="director_content">
+                <header class="director_header"> <h2> О нашем директоре: </h2> </header>
+                <p class="fContent_head"></p>
+                <p class="fContent">Нащ директор - Фокина Ольга Сергеевна, основное образование - инженер, прошла курсы
+                нутрициолгоии.</p>
             </div>
         </section>
     </section>
@@ -26,6 +33,8 @@
 
 
 <script>
+import AOS from 'aos';
+AOS.init();
 
 export default {
     name: "HomeView",
@@ -44,15 +53,44 @@ export default {
         margin-left: 2.5vw;
     }
 
-    .welcome_container, .footer_content {
+    .welcome_container {
+        display: flex;
+
         width: auto;
-        max-width: 350px;
     }
 
     .welcome_content{
         height: auto;
         scale: 100%;
         transition-duration: 0.5s;
+        width: auto;
+        max-width: 350px;
+    }
+
+    .director_content {
+        height: auto;
+        scale: 100%;
+        transition-duration: .5s;
+        width: auto;
+        max-width: 350px;
+    }
+
+    .director_header {
+        font-family: Comfortaa, cursive;
+        height: auto;
+
+        background-image: url("../../src/assets/background/bg-grad-1.jpg") ;
+        background-size: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        text-align: center;
+        vertical-align: center;
+    }
+
+    .director_header > h2 {
+        padding: 8px;
+        letter-spacing: 1px;
     }
 
     .welcome_header {
@@ -101,11 +139,11 @@ export default {
         transition-duration: 0.5s;
     }
 
-    .welcome_content:hover .fContent_head {
+    .welcome_content:hover .fContent_head{
         border-bottom: white 1px solid;
         box-sizing: border-box;
 
-        transition: all 1s linear;
+        transition-duration: 1.5s;
     }
 
     @media (prefers-color-scheme: dark) {
