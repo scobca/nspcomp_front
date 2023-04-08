@@ -8,7 +8,7 @@
                  data-aos="fade-down"
                  data-aos-duration="1500"
                  data-aos-delay="350">
-
+ 
             <div class="welcome_content">
                 <header class="welcome_header">
                     <h2> Добро пожаловать! </h2>
@@ -36,10 +36,30 @@
                 </header>
 
                 <footer class="director_footer">
-                    <p class="fContent_head">Иванов иван Иванович</p>
+                    <p class="fContent_head">Иванов Иван Иванович</p>
                     <p class="fContent">
                         Образование: инженер-экономист
                         Прошел курсы нутрициологии
+                    </p>
+                </footer>
+            </div>
+        </section>
+
+        <section class="product_container container"
+                 data-aos="fade-down"
+                 data-aos-duration="1500"
+                 data-aos-delay="750">
+
+            <div class="product_content">
+                <header class="product_header">
+                    <h2> О нашей продукции </h2>
+                </header>
+
+                <footer class="product_footer">
+                    <p class="fContent_head"> БАДы от NSP - что это?</p>
+                    <p class="fContent">
+                        Вступая в клуб NSP вы получаете доступ к личной консультации врача-специалиста и скидке на продукцию
+                        компании
                     </p>
                 </footer>
             </div>
@@ -69,27 +89,25 @@ export default {
         margin: 8vh 2.5vw 10vh;
     }
 
-    .welcome_container, .director_container {
+    .welcome_container, .director_container, .product_container {
         display: flex;
         width: auto;
         padding-left: .5vw;
         padding-right: .5vw;
     }
 
-    .welcome_content, .director_content{
+    .welcome_content, .director_content, .product_content{
         height: auto;
         width: auto;
-        max-width: 350px;
+        max-width: 27vw;
         scale: 100%;
         transition-duration: 0.5s;
     }
 
-    .welcome_header, .director_header {
+    .welcome_header, .director_header, .product_header {
         font-family: Comfortaa, cursive;
         height: auto;
 
-        background-image: url("../../src/assets/background/bg-grad-1.jpg") ;
-        background-size: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
 
@@ -97,17 +115,27 @@ export default {
         vertical-align: center;
     }
 
+    .welcome_header {
+        background-image: url("../../src/assets/background/bg-grad-1.jpg") ;
+        background-size: 100%;
+    }
+
     .director_header {
         background-image: url("../../src/assets/background/bg-grad-3.jpg") ;
         background-size: 100%;
     }
 
-    .welcome_header > h2, .director_header > h2 {
+    .product_header {
+        background-image: url("../../src/assets/background/bg-grad-1.jpg") ;
+        background-size: 100%;
+    }
+
+    .welcome_header > h2, .director_header > h2, .product_header > h2{
         padding: 8px;
         letter-spacing: 1px;
     }
 
-    .welcome_footer, .director_footer {
+    .welcome_footer, .director_footer, .product_footer {
         padding: 16px;
         margin: auto;
         text-align: left;
@@ -130,12 +158,12 @@ export default {
         padding: 0 5px 0 10px;
     }
 
-    .welcome_content:hover, .director_content:hover {
+    .welcome_content:hover, .director_content:hover, .product_content:hover {
         scale: 105%;
         transition-duration: 0.5s;
     }
 
-    .welcome_content:hover .fContent_head, .director_content:hover .fContent_head{
+    .welcome_content:hover .fContent_head, .director_content:hover .fContent_head, .product_content:hover .fContent_head{
         border-bottom: white 1px solid;
         box-sizing: border-box;
 
@@ -143,12 +171,12 @@ export default {
     }
 
     @media (prefers-color-scheme: dark) {
-        .welcome_content, .director_content {
+        .welcome_content, .director_content, .product_content {
             background-color: rgba(223, 214, 229, 0.15);
             border-radius: 10px;
         }
 
-        .welcome_header > h2, .director_header > h2 {
+        .welcome_header > h2, .director_header > h2, .product_header > h2 {
             color: var(--vt-c-white);
         }
 
