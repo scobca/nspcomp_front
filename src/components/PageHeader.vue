@@ -21,6 +21,10 @@
                 <li class="menu__button">
                     <router-link :to="{ name: 'catalog' }" class="menu__link"> Каталог </router-link>
                 </li>
+
+                <li class="menu__button">
+                    <router-link :to="{ name: 'home' }" class="menu__link" v-if="$route.name !== 'home'"> Главная </router-link>
+                </li>
             </ul>
         </div>
     </div>

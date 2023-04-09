@@ -1,14 +1,22 @@
 <template>
-    <PageHeader class="page_header"/>
+    <PageHeader class="page_header"
+                data-aos="fade-down"
+                data-aos-duration="750"/>
+
     <div class="v-carousel-app">
         <v-carousel
             :carousel_data="sliderItem"
-            :interval="0"
+            :interval="4000"
             v-if="$route.name === 'home'"
             class="carousel_slider"
+
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="350"
         />
     </div>
-    <HomeView class="homeView"/>
+
+    <HomeView class="homeView" v-if="$route.name === 'home'"/>
 </template>
 
 
